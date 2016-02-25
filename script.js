@@ -24,9 +24,18 @@ function runWinCondition(winningTiles,winningSelector)
 
 function nextPlayerTurn()
 {
-	currentPlayer=(currentPlayer+1) % 2;
-	var playerName=(currentPlayer===0 ? "Player 1" : "Player 2");
-	var gamefooter=document.getElementsByClassName('gamefooter')[0].textContent="It's " + playerName + "'s turn...";	
+	var isGameOver=((document.querySelectorAll(".tile.tile-x, .tile.tile-o")).length>=9);
+	if(isGameOver){
+		currentPlayer=-1;
+		var gamefooter=document.getElementsByClassName('gamefooter')[0].textContent="Nobody wins! Cat's Game! =(";
+
+	}
+	else
+	{
+		currentPlayer=(currentPlayer+1) % 2;
+		var playerName=(currentPlayer===0 ? "Player 1" : "Player 2");
+		var gamefooter=document.getElementsByClassName('gamefooter')[0].textContent="It's " + playerName + "'s turn...";	
+	}
 }
 
 function processClick(event)
