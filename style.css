@@ -1,0 +1,53 @@
+.gameheader-container,
+.gamefooter-container
+{
+	margin:0px auto;
+	text-align:center;
+}
+
+table  {
+	border-collapse:collapse;
+	border-spacing:0;
+	margin:0px auto;
+	background-color:transparent;
+}
+td{
+	font-family:Arial, sans-serif;
+	font-size:36px;
+	/*padding:10px 10px;*/
+	border:gray dashed 1px;
+	overflow:hidden;
+	word-break:normal;
+	font-size:36px;
+	text-align:center;
+	background-color:transparent;
+}
+
+div.box, 
+div.tile-unset,  
+div.tile-x,
+div.tile-o
+{
+	width:2em;
+	height:2em
+}
+
+div.tile-unset {
+	background-color:white;
+}
+
+div.tile-x
+{
+	background-color:blue;
+}
+
+div.tile-o
+{
+	background-color:red;
+}
+
+div.tile-winner {
+	-webkit-box-shadow: inset 0px 0px 3px 5px rgba(255,255,0,1);
+	-moz-box-shadow: inset 0px 0px 3px 5px rgba(255,255,0,1);
+	box-shadow: inset 0px 0px 3px 5px rgba(255,255,0,1);
+}
